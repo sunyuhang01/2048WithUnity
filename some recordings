@@ -1,0 +1,31 @@
+2048记录
+
+1. 创建 4*4方格
+	1. 创建GameContorller脚本，用于控制游戏逻辑
+		- 生成方格
+		- 为游戏结束按钮增加事件监听，在点击时退出游戏
+		- 。。。
+	2. 创建NumberSprite脚本，用于定义精灵行为
+		- 设置图片
+		- 使用Itween的缩放动画并在生成时调用
+		- 。。。
+	3. 创建ResourceManager类，用于读取资源（根据名称加载sprite）
+
+2. 生成新数字
+	1. 导入算法类：GameCore，Location，MoveDirection
+	2. 修改GameCore中生成数字的方法（返回位置和数字）
+		GenerateNumber() ==> GenerateNumber(out Location? loc, out int? number)
+	3. 在GameController脚本中添加生成新数字的方法
+		修改创建sprite的方法(创建sprite时，存储精灵行为脚本对象引用)
+
+3. 更新界面
+	1. 拖拽时判定方向并执行核心方法并生成新数字
+	2. 当地图更新时进行界面更新
+
+4. 有待改进
+	1. 当前只做完了核心游戏逻辑和基本界面
+	2. 添加记分的部分
+	3. 添加菜单目录
+	4. 游戏结束时弹出结束窗口
+	5. 数字块移动和合并的动画
+	6. 音效
